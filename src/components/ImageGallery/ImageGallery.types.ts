@@ -1,10 +1,7 @@
-export interface Image {
-    id: number;
-    webformatURL: string;
-    largeImageURL: string;
-}
+import { Image } from '../App/App.types';
 
 export interface ImageGalleryProps {
-    images: Image[];
-    onImageClick: (largeImageURL: string) => void;
+  images: Image[];
+  onImageClick: (largeImageURL: string) => void;
 }
+

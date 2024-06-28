@@ -1,37 +1,25 @@
-import css from './ImageModal.module.css';
+import styles from './ImageModal.module.css';
 import Modal from 'react-modal';
-import { ImageModalProps } from './ImageMofal.types';
+import { ImageModalProps } from './ImageModal.types';
 
-// export default function ImageModal({
-//   isOpen,
-//   onRequestClose,
-//   modalImageUrl,
-//   modalImageAlt,
-// }) {
-//   Modal.setAppElement('#root');
-//   return (
-//     <Modal
-//       className={css.modal}
-//       overlayClassName={css.overlay}
-//       isOpen={isOpen}
-//       onRequestClose={onRequestClose}
-//       contentLabel="Modal image"
-//     >
-//       <img
-//         src={modalImageUrl}
-//         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-//         alt={modalImageAlt}
-//       />
-//     </Modal>
-//   );
-// }
+Modal.setAppElement('#root');
 
-const ImageModal: React.FC<ImageModalProps> = ({ largeImageURL, onClose }) => (
-  <div className="overlay" onClick={onClose}>
-    <div className="modal">
-      <img src={largeImageURL} alt="" />
-    </div>
-  </div>
-);
+const ImageModal: React.FC<ImageModalProps> = ({ largeImageURL, onClose }) => {
+  return (
+    <Modal
+      isOpen={!!largeImageURL}
+      onRequestClose={onClose}
+      className={styles.modal}
+      overlayClassName={styles.overlay}
+      contentLabel="Modal image"
+    >
+      <img
+        src={largeImageURL}
+        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        alt="Modal"
+      />
+    </Modal>
+  );
+};
 
 export default ImageModal;

@@ -1,4 +1,11 @@
-export interface AppState {
+export interface Image {
+    id: string;
+    webformatURL: string;
+    largeImageURL: string;
+    description?: string;
+  }
+  
+  export interface AppState {
     images: Image[];
     query: string;
     page: number;
@@ -6,15 +13,10 @@ export interface AppState {
     error: string | null;
     showModal: boolean;
     largeImageURL: string;
-}
+  }
   
-export interface Image {
-    id: string;
-    webformatURL: string;
-    largeImageURL: string;
-}
-  
-export interface SearchParams {
+  export interface SearchParams {
     query: string;
     page: number;
-}
+  }
+  

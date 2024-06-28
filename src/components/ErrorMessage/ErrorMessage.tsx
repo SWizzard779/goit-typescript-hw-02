@@ -7,7 +7,7 @@ import { ErrorMessageProps } from './ErrorMessage.types';
 
 
 const ErrorMessage: React.FC<ErrorMessageProps> = ({ message }) => (
-  <div className="error-message">
+  <div className="css.error">
     {message}
   </div>
 );

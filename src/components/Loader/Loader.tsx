@@ -19,7 +19,7 @@ import { LoaderProps } from './Loader.types';
 // }
 
 const Loader: React.FC<LoaderProps> = () => (
-  <div>Loading...</div>
+  <div className={css.loader}>Loading...</div>
 );
 
 export default Loader;

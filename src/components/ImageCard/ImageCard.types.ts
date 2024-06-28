@@ -1,6 +1,6 @@
-import { Image } from '../ImageGallery/ImageGallery.types';
+import { Image } from '../App/App.types';
 
 export interface ImageCardProps {
   image: Image;
-  onClick: () => void;
+  onClick: (largeImageURL: string) => void;
 }
